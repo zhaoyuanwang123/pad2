@@ -1,0 +1,21 @@
+# mount point   fstype   device                                  flags
+/boot           emmc     /dev/block/bootdevice/by-name/boot      flags=backup=1;display=Boot;slotselect
+/init_boot      emmc     /dev/block/bootdevice/by-name/init_boot flags=backup=1;display=Init Boot;slotselect
+/vendor_boot    emmc     /dev/block/bootdevice/by-name/vendor_boot flags=backup=1;display=Vendor Boot;slotselect
+/dtbo           emmc     /dev/block/bootdevice/by-name/dtbo      flags=backup=1;display=DTBO;slotselect
+/recovery       emmc     /dev/block/bootdevice/by-name/recovery  flags=backup=1;display=Recovery;slotselect
+/cache          ext4     /dev/block/bootdevice/by-name/cache     flags=display=Cache;wipeingui;backup=1
+/metadata       f2fs     /dev/block/bootdevice/by-name/metadata  flags=display=Metadata;wipeingui;backup=1
+/data           f2fs     /dev/block/bootdevice/by-name/userdata  flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0;metadata_encryption=aes-256-xts:wrappedkey_v0;keydirectory=/metadata/vold/metadata_encryption;quota;reservedsize=128M;display=Data;wipeingui;backup=1
+/system         erofs    /dev/block/mapper/system                flags=slotselect;display=System;backup=1
+/vendor         erofs    /dev/block/mapper/vendor                flags=slotselect;display=Vendor;backup=1
+/product        erofs    /dev/block/mapper/product               flags=slotselect;display=Product;backup=1
+/system_ext     erofs    /dev/block/mapper/system_ext            flags=slotselect;display=System Ext;backup=1
+/vendor_dlkm    erofs    /dev/block/mapper/vendor_dlkm           flags=slotselect;display=Vendor DLKM;backup=1
+/system_dlkm    erofs    /dev/block/mapper/system_dlkm           flags=slotselect;display=System DLKM;backup=1
+/odm            erofs    /dev/block/mapper/odm                   flags=slotselect;display=ODM;backup=1
+/cust           erofs    /dev/block/mapper/cust                  flags=slotselect;display=Cust;backup=1
+/preas          erofs    /dev/block/mapper/preas                 flags=slotselect;display=Preas;backup=1
+/preavs         erofs    /dev/block/mapper/preavs                flags=slotselect;display=Preavs;backup=1
+/version        erofs    /dev/block/mapper/version               flags=slotselect;display=Version;backup=1
+/preload        erofs    /dev/block/mapper/preload               flags=slotselect;display=Preload;backup=1
